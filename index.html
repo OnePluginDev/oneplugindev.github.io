@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143751908-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-143751908-2');
+    </script>
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link href="./app.css" rel="stylesheet">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="./js/lightbox.css">
+    <meta name="description" content="Unofficial course catalog viewer for A&M students."/>
+    <title>AggieSync - Unofficial Texas A&M Course Catalog Viewer</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+    <link rel="manifest" href="fav/site.webmanifest">
+  
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-content>
+                <div class="extensionSidebar">
+                    <div class="title betterTitle">
+                        Installation
+                    </div>
+                    <a href="https://chrome.google.com/webstore/detail/aggie-sync/pmmdpalbfdipcobljjokepkmcodfacda" target="_blank">
+                        <img src="img0001.png"
+                            alt="">
+                    </a>
+                    <br />
+                    <div style="margin-top: calc(100vh - 53px - 58px - 120px)">
+                        <a>contact@aggiesync.com</a> <br />
+                        <small style="font-size: 11px;">
+                            Copyright © 2019 by <strong>Nathan Reddy</strong>. All rights reserved for
+                            <span style="color: #600">aggiesync.com </span>.
+                        </small>
+                    </div>
+                </div>
+                <div class="mainDiv">
+                    <div class="mainDivText">
+                        <br />
+                        <p class="display-1">
+                            AggieSync
+                        </p>
+                        <p class="title font-weight-light">
+                            Unofficial course catalog viewer for A&M students. Mirrors most of the functionality with
+                            added GPA distributions, updated design, and full section/course loading.
+                        </p>
+                        <p class="subtitle font-weight-light">
+                            While anyone can use this plugin and view courses, you <strong>must</strong> use the registration button on <a href="https://howdy.tamu.edu">Howdy</a> to actually sign up for a class. 
+                        </p>
+                            <p class="subtitle font-weight-light">
+                            Requires Google Chrome with Web Store access to <a href="https://chrome.google.com/webstore/detail/aggie-sync/pmmdpalbfdipcobljjokepkmcodfacda">install</a>. 
+                        </p>
+                    </div>
+                    <strong>
+                        Screenshots:
+                    </strong>
+                    <br />
+                    <a href="img/img1.png" data-lightbox="roadtrip" data-title="Full department listing">
+                        <img src="img/img1.png" alt="" class="img-icon">
+                    </a> 
+                    <a href="img/img2.png" data-lightbox="roadtrip" data-title="Full section loading">
+                        <img src="img/img2.png" alt="" class="img-icon">
+                    </a>
+                    <a href="img/img3.png" data-lightbox="roadtrip" data-title="Filtered sections">
+                        <img src="img/img3.png" alt="" class="img-icon">
+                    </a> 
+                    <a href="img/img4.png" data-lightbox="roadtrip" data-title="Detailed GPA reports">
+                        <img src="img/img4.png" alt="" class="img-icon">
+                    </a>
+                    <a href="img/img5.png" data-lightbox="roadtrip" data-title="Custom Filters">
+                        <img src="img/img5.png" alt="" class="img-icon">
+                    </a>
+                </div>
+            </v-content>
+        </v-app>
+    </div>
+
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="./js/lightbox.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data() {
+                return {
+                    items: [
+                        'img/img1.png',
+                        'img/img2.png',
+                        'img/img3.png',
+                        'img/img4.png',
+                        'img/img5.png',
+                    ],
+                }
+            }
+        })
+    </script>
+    <script>
+            lightbox.option({
+              'resizeDuration': 200,
+              'wrapAround': true
+            })
+        </script>
+        
+</body>
+
+</html>

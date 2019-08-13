@@ -1,0 +1,40 @@
+.extensionSidebar {
+    width: 226px;
+    height: 100vh;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    position: absolute;
+    top: 0;
+}
+.betterTitle {
+    padding: 20px 0px 0px 0px;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.mainDiv {
+    margin-left: 280px;
+    padding: 10px;
+}
+.img-icon {
+    width: 100%;
+    max-width: 250px;
+    padding: 2px;
+    margin: 8px;
+    border: 1px solid #bbb;
+}
+.mainDivText {
+    /* max-width: 60vw; */
+}
+/* @media only screen and (max-width: 600px) {
+    .extensionSidebar {
+        display: none;  
+    }
+    .mainDiv {
+        margin: 0px 10px;
+    }
+    .mainDivText {
+        max-width: 100%;
+    }
+  } */
+  
