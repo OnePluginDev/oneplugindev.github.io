@@ -1,9 +1,12 @@
+[v-cloak] {
+    display: none;
+}
 .extensionSidebar {
     width: 226px;
     height: 100vh;
     padding: 10px;
     border-right: 1px solid #ddd;
-    position: absolute;
+    position: fixed;
     top: 0;
 }
 .betterTitle {
