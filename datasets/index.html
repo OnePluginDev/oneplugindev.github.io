@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+        <a href="https://aggiesync.com" style="padding: 10px;">
+            Return back to AggieSync
+        </a>
+        <v-content style="max-width: 1200px; margin: 0px auto; width: 95vw; padding: 10px;">
+        <h2 class="display-1">
+            Course Datasets
+        </h2>
+        <p class="subtitle-1">
+            Below are free to use datasets scraped from compass-ssb.tamu.edu. All data scraped was publicly accessable (and still is), so I do not take any ownership of these datasets or how you choose to use them. You can use them to build projects, train ML models, etc. There are two options avaiable for download, the original raw file, and a parsed version that helps reduce size and is generally easier to work with.
+            <br />
+            <a href="">Github link</a> (has all downloads).
+        </p>
+        <div class="title">
+            General Files
+        </div>
+        <ul>
+            <li>
+                <a href="./output/semesters.json" download>
+                    Semester codes to semester names
+                </a>
+            </li>
+            <li>
+                <a href="./output/attributesMap.json" download>
+                  List of all course attributes
+                </a>
+            </li>
+            <li>
+                <a href="./output/meetingTypes.js" download>
+                  List of meeting types
+                </a>
+            </li>
+        </ul>
+        <div v-for="(sem, index) in sems" :key="index">
+            <br />
+            <div class="title">
+                {{codes[sem]}}
+            </div>
+            <a :href="`./output/${sem}.json`" download>Parsed</a>
+            &nbsp;
+            &nbsp;
+            <a :href="`./output/${sem}.raw.json`" download>Raw</a>
+        </div>
+        <br />
+      </v-content>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: {
+        sems: 
+          [
+          "201931",
+          "201921",
+          "201911",
+          "201831",
+          "201821",
+          "201811",
+          "201731",
+          "201721",
+          "201711",
+          "201631",
+          "201621",
+          "201611",
+          "201531",
+          "201521",
+          "201511",
+          "201431",
+          "201421",
+          "201411"
+        ],
+        codes: {
+          "201931": "Fall 2019" ,
+          "201921": "Summer 2019" ,
+          "201911": "Spring 2019" ,
+          "201831": "Fall 2018" ,
+          "201821": "Summer 2018" ,
+          "201811": "Spring 2018" ,
+          "201731": "Fall 2017" ,
+          "201721": "Summer 2017" ,
+          "201711": "Spring 2017" ,
+          "201631": "Fall 2016" ,
+          "201621": "Summer 2016" ,
+          "201611": "Spring 2016" ,
+          "201531": "Fall 2015" ,
+          "201521": "Summer 2015" ,
+          "201511": "Spring 2015" ,
+          "201431": "Fall 2014" ,
+          "201421": "Summer 2014" ,
+          "201411": "Spring 2014" ,
+          "201331": "Fall 2013",
+          "201321": "Summer 2013",
+          "201311": "Spring 2013",
+          "201231": "Fall 2012",
+          "201221": "Summer 2012",
+          "201211": "Spring 2012",
+          "201131": "Fall 2011",
+          "201121": "Summer 2011",
+          "201111": "Spring 2011",
+          "201031": "Fall 2010",
+          "201021": "Summer 2010",
+          "201011": "Spring 2010",
+          "200931": "Fall 2009"
+        }
+      }
+    })
+  </script>
+</body>
+</html>
